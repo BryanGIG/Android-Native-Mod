@@ -16,22 +16,34 @@ existing frameworks, since it messy and i don't like it.
    in `app/src/main/cpp/CMakeLists.txt`
 4. Start coding
 5. Build the project
-6. Copy the generated .so from `app/build/outputs/native/{debug/release}/lib{library_name}.so`
+6. Copy the generated .so from `app/build/outputs/native/{debug/release}/lib{template}.so`
 7. Load the library in your modded app
-   </br>You can use many various methods to load the library, example:
-   #### System.loadLibrary
-   Note: Remember to change "template" to your library name
-    ```java
-    const-string v0, "template"
- 
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    ```
-   #### `xdl_open` by [xDL - hexhacking](https://github.com/hexhacking/xDL)
-    ```c
-    void* handle = xdl_open("library_name", RTLD_NOW);
-    ```
-   #### Other methods
-   This project is merely a template, so you can use any method you want to load the library.
+   </br>You can use many various methods to load the library, see [Injecting the library](#injecting-the-library)
+
+### Injecting the library
+This project is merely a template, so you can use any method you want to load the library.</br>
+Here are some examples: </br></br>
+Note: Modify "**template**" to your library name
+
+- #### [Android-Ptrace-Injector - reveny](https://github.com/reveny/Android-Ptrace-Injector)
+```bash
+./Injector -p "com.target.package" -l "template"
+```
+
+- #### [System.loadLibrary](https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#loadLibrary-java.lang.String)
+```java
+const-string v0, "template"
+
+invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+```
+
+- #### [xDL - hexhacking](https://github.com/hexhacking/xDL)
+```c
+void* handle = xdl_open("template", RTLD_NOW);
+```
+
+- #### Other methods
+As long as you can load the library into the target process, you can use any method you want.
 
 ### To-Do
 - [x] Polymorphism design pattern
