@@ -21,7 +21,7 @@ existing frameworks, since it messy and i don't like it.
    </br>You can use many various methods to load the library, example:
    #### System.loadLibrary
    Note: Remember to change "template" to your library name
-    ```smali
+    ```java
     const-string v0, "template"
  
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
@@ -34,13 +34,13 @@ existing frameworks, since it messy and i don't like it.
    This project is merely a template, so you can use any method you want to load the library.
 
 ### To-Do
-[x] Polymorphism design pattern
-[x] Unity API (Vector2, Vector3, Quaternion, etc)
-[x] Doc: How to use
-[] Doc: What need to be changed
-[] Doc: What each file does
-[] Doc: How to add new functions
-[] Doc: How to add new classes
+- [x] Polymorphism design pattern
+- [x] Unity API (Vector2, Vector3, Quaternion, etc)
+- [x] Doc: How to use
+- [ ] Doc: What need to be changed
+- [ ] Doc: What each file does
+- [ ] Doc: How to add new functions
+- [ ] Doc: How to add new classes
 
 ### Credit
 
