@@ -21,7 +21,6 @@ public:
 };
 
 namespace ListCBaseEntry {
-    void add(const std::vector<CBaseEntry *>& entry);
 
     void add(const std::shared_ptr<CBaseEntry>& entry);
 

@@ -3,7 +3,7 @@
 /*
  * This file is just sample, you can modify this
  */
-class CheatDetector : public CBaseEntry {
+class ExampleEntry : public CBaseEntry {
 public:
     const char *getAssembly() override;
 

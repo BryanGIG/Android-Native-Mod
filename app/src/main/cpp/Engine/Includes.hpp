@@ -26,9 +26,9 @@
 /*
  * Early class define so it can be used for other classes
  */
-class CheatDetector;
+class ExampleEntry;
 
 /*
  * Include our structure classes
  */
-#include "Structure/CheatDetector.hpp"
+#include "Structure/ExampleEntry.hpp"

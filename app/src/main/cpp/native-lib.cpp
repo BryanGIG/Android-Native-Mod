@@ -11,10 +11,12 @@ void lib_main() {
             map = KittyMemory::getElfBaseMap("libil2cpp.so");
         } while (!map.isValid() && !map.isValidELF());
 
+        Il2Cpp::Init("libil2cpp.so");
+
         // Initialize the classes
         ListCBaseEntry::add({
-                                    new CheatDetector()
-                            });
+            std::make_shared<ExampleEntry>()
+        });
         ListCBaseEntry::Initialize();
     }).detach();
 }
