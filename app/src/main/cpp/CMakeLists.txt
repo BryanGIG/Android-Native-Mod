@@ -10,7 +10,7 @@ endmacro()
 
 SET_OPTION(DOBBY_GENERATE_SHARED OFF)
 SET_OPTION(Plugin.SymbolResolver OFF)
-add_subdirectory(External/dobby)
+add_subdirectory(External/Dobby)
 
 # KittyMemory setup
 add_compile_definitions(kNO_KEYSTONE)
