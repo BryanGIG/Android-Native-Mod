@@ -14,13 +14,6 @@ std::shared_ptr<T> ListCBaseEntry::get() {
     return nullptr;
 }
 
-void ListCBaseEntry::add(const std::vector<CBaseEntry *>& entry) {
-    std::lock_guard<std::mutex> guard(listMutex);
-    for (auto &e : entry) {
-        add(std::shared_ptr<CBaseEntry>(e));
-    }
-}
-
 void ListCBaseEntry::add(const std::shared_ptr<CBaseEntry>& entry)  {
     std::lock_guard<std::mutex> guard(listMutex);
     list.push_back(entry);
